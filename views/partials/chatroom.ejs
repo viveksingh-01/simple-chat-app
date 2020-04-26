@@ -1,0 +1,34 @@
+<div class="p-2 mx-auto container-chatroom">
+  <header>
+    <h3 class="my-4 display-5">Simple Chat App</h3>
+  </header>
+  <div class="my-3 form-inline">
+    <label for="username">Username:</label>
+    <input
+      type="text"
+      class="ml-2 form-control"
+      name="username"
+      id="username"
+      placeholder="Enter username"
+    />
+    <button class="ml-3 btn btn-primary" id="btn-change-username">
+      Change username
+    </button>
+  </div>
+  <div class="my-3">
+    <p id="feedback" style="font-size: 14px;">&nbsp;</p>
+  </div>
+  <section class="my-3 chat-window" id="chat-window"></section>
+  <div class="d-flex">
+    <input
+      type="text"
+      class="form-control"
+      name="message"
+      id="message"
+      placeholder="Enter message"
+    />
+    <button type="submit" class="ml-2 btn btn-success" id="btn-send-message">
+      Send
+    </button>
+  </div>
+</div>

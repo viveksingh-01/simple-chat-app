@@ -1,0 +1,25 @@
+body {
+  background-color: #f9f9f9;
+}
+
+.container-chatroom {
+  width: 100%;
+}
+
+.chat-window {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 450px;
+  padding: 9px 12px;
+}
+
+.messages {
+  font-family: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .container-chatroom {
+    width: 50%;
+  }
+}
