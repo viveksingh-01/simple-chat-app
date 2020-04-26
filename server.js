@@ -34,4 +34,12 @@ io.on('connection', (socket) => {
   socket.on('change_username', (data) => {
     socket.username = data.username;
   });
+
+  // Listen on 'send_message and emit message to all the users including the sender
+  socket.on('new_message', (data) => {
+    io.sockets.emit('new_message', {
+      message: data.message,
+      username: socket.username
+    });
+  });
 });
