@@ -42,4 +42,13 @@ io.on('connection', (socket) => {
       username: socket.username
     });
   });
+
+  // Listen on 'start_feedback' and broadcast to all users except the send
+  socket.on('start_feedback', () => {
+    socket.broadcast.emit('start_feedback', { username: socket.username });
+  });
+
+  socket.on('end_feedback', () => {
+    socket.broadcast.emit('end_feedback');
+  });
 });
