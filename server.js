@@ -24,6 +24,14 @@ app.get('/', (req, res) => {
 const io = require('socket.io')(server);
 
 // Listen on every connection
-io.on('connection', () => {
+io.on('connection', (socket) => {
   console.log('New user connected');
+
+  // Set default username
+  socket.username = 'Anonymous';
+
+  // Listen on 'change_username' and set usernamme
+  socket.on('change_username', (data) => {
+    socket.username = data.username;
+  });
 });
